@@ -1,0 +1,8 @@
+RewriteEngine on
+Options -Indexes
+ErrorDocument 403 /ImageUpload/sources/views/forbidden.html
+Order deny,allow
+Allow from *
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
