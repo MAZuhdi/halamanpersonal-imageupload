@@ -1,0 +1,21 @@
+{
+  "user": {
+    "id": 3,
+    "name": "Esto Triramdani N",
+    "username": "estotriramdani",
+    "email": "estolagi@gmail.com",
+    "email_verified_at": null,
+    "theme_id": "1",
+    "headline": "Front-end Engineer",
+    "photo": "estotriramdani.1631849987.jpg",
+    "introduction": "<div><!--block-->I am a fast leaner, speed worker, and adaptive person. When working on a project, I can turn myself into target-oriented mode. I love to solve problems with code and keep the solution as simple as possible. I also have written some books (bukuesto.github.io).<br><br></div>",
+    "more_info": "<div><!--block--><strong>Programming Languages</strong></div><div><!--block--><strong>JavaScript</strong> • <strong>PHP</strong> • Python • Dart • <strong>SQL </strong>&nbsp;• <strong>TypeScript</strong> <strong><br></strong><br></div><div><!--block--><strong>Frameworks / Libraries</strong></div><div><!--block-->React JS • React Native • Bootstrap CSS • Laravel • CodeIgniter • Vue JS • SASS • Angular • jQuery • Node JS • Express JS • MySQL/MariaDB/PostgreSQL<br><br></div><div><!--block--><strong>Design Tools</strong></div><div><!--block--><strong>Adobe Photoshop</strong> • Adobe XD • Adobe Illustrator • <strong>Figmaa</strong></div>",
+    "facebook": "estolagi",
+    "instagram": "estotriramdani",
+    "linkedin": "estotriramdani",
+    "github": "estotriramdani",
+    "created_at": "2021-09-16T02:20:38.000000Z",
+    "updated_at": "2021-09-17T03:39:47.000000Z"
+  },
+  "token": "20|iob8B5fyWQ3WdzZk5lbNMbR7XcUHRL9R6CWGCmmH"
+}

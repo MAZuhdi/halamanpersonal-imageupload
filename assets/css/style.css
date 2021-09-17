@@ -1,0 +1,37 @@
+.bg-gradient-primary {
+  background: linear-gradient(to top right, #219ebc, #023047);
+}
+body {
+  min-height: 100vh;
+}
+input:focus {
+  outline: none;
+}
+.btn-primary {
+  background-color: #219ebc !important;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background-color: #023047 !important;
+}
+
+.text-primary {
+  color: #219ebc !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  color: #023047 !important;
+}
+
+.centered-content {
+  position: absolute; 
+  transform: translate(-50%, -50%); 
+  top: 50%; 
+  left: 50%;
+}
