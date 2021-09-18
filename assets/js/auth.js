@@ -64,7 +64,7 @@ function handleLogin() {
       if (result.token) {
         window.localStorage.setItem('user_info', JSON.stringify(result.user));
         window.localStorage.setItem(
-          'crendetials',
+          'credentials',
           JSON.stringify(result.token)
         );
         window.location.pathname = '/ImageUpload';
