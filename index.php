@@ -12,6 +12,12 @@ include_once 'sources/layouts/header.php';
   </div>
 
   <div class="row" id="card-wrapper">
+    <!-- 
+    isi card nya ada di assets/js/home.js varible: cardHTML
+    nanti copas cardnya dari file tsb
+    di button ada attribute value, diisi dengan link ke file nya
+    src di img nya juga diisi dengan link ke file nya
+    -->
   </div>
 
   <nav aria-label="Page navigation example">
