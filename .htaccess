@@ -1,6 +1,7 @@
 RewriteEngine on
 Options -Indexes
-ErrorDocument 403 /ImageUpload/sources/views/forbidden.html
+ErrorDocument 403 /ImageUpload/sources/views/403.html
+ErrorDocument 404 /ImageUpload/sources/views/404.html
 Order deny,allow
 Allow from *
 RewriteCond %{REQUEST_FILENAME} !-d

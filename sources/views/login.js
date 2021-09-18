@@ -19,7 +19,7 @@ const formGenerator = (name, type) => `
     type="${type}"
     name="${name}"
     id="${name}"
-    class="form-control shadow-none mb-3"
+    class="form-control shadow-none mb-2"
     placeholder="${name[0].toUpperCase() + name.substr(1)}"
     oninput="handleChangeInput(this)"
   />
@@ -32,7 +32,7 @@ const formGroup = {
   password: formGenerator('password', 'password'),
   button: formButton,
   error: formError,
-}
+};
 
 const forms = `
 ${formGroup.error}
@@ -49,8 +49,8 @@ const loginHTML = `
   </div>
 </div>`;
 
-const customScript = document.createElement('script')
+const customScript = document.createElement('script');
 customScript.src = 'assets/js/auth.js';
 
 content.innerHTML = loginHTML;
-content.appendChild(customScript)
+content.appendChild(customScript);

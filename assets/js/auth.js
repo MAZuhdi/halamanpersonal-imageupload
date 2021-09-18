@@ -74,12 +74,3 @@ function handleLogin() {
 }
 
 
-const user_info = window.localStorage.getItem('user_info');
-console.log(JSON.parse(user_info))
-if (user_info !== null) {
-  // window.location.pathname = '/ImageUpload';
-  console.log('okk')
-} else if ( user_info !== '{}') {
-  console.log('okk')
-
-}
