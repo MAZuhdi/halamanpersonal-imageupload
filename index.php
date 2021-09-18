@@ -12,12 +12,37 @@ include_once 'sources/layouts/header.php';
   </div>
 
   <div class="row" id="card-wrapper">
-    <!-- 
-    isi card nya ada di assets/js/home.js varible: cardHTML
-    nanti copas cardnya dari file tsb
-    di button ada attribute value, diisi dengan link ke file nya
-    src di img nya juga diisi dengan link ke file nya
-    -->
+    <?php
+    include "sources/helpers/connection.php";
+    // jalankan query untuk menampilkan semua data diurutkan berdasarkan id
+    $query = "SELECT * FROM images";
+    $result = mysqli_query($conn, $query);
+    //mengecek apakah ada error ketika menjalankan query
+    if (!$result) {
+      die("Query Error: " . mysqli_errno($conn) .
+        " - " . mysqli_error($conn));
+    }
+
+    //buat perulangan untuk element tabel dari data mahasiswa
+    $no = 1; //variabel untuk membuat nomor urut
+    // hasil query akan disimpan dalam variabel $data dalam bentuk array
+    // kemudian dicetak dengan perulangan while
+    while ($row = mysqli_fetch_assoc($result)) {
+      $imgurl = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . 'images/' . $row['img'];
+    ?>
+      <div class="col-md-3 p-2">
+        <div class="card shadow">
+          <img tabindex="1" src="images/<?php echo $row['img'] ?> " class="card-img-top" alt="slug-gambar">
+          <div class="card-body">
+            <button onclick="handleChangeGambar(this)" data-bs-toggle="modal" data-bs-target="#exampleModal" value="<?php echo $imgurl ?>" class="btn-sm btn btn-primary mb-1" style="text-transform: capitalize;" title="<?php echo $imgurl ?>"><i class="bi bi-fullscreen"></i>&nbsp; Ukuran Penuh</button>
+            <button onclick="handleCopyLink(this)" value="<?php echo $imgurl ?>" class="btn-sm btn btn-primary" style="text-transform: capitalize;" title="<?php echo $imgurl ?>"><i class="bi bi-clipboard"></i>&nbsp; Salin Alamat Gambar</button>
+          </div>
+        </div>
+      </div>
+    <?php
+      $no++; //untuk nomor urut terus bertambah 1
+    }
+    ?>
   </div>
 
   <nav aria-label="Page navigation example">

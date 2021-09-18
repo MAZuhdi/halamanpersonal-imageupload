@@ -1,0 +1,7 @@
+CREATE TABLE images ( 
+id INT(11) NOT NULL AUTO_INCREMENT ,
+email VARCHAR(60),
+title VARCHAR(60), 
+slug VARCHAR(60), 
+img VARCHAR(255),    
+PRIMARY KEY  (id)) ENGINE = InnoDB;   
