@@ -2,6 +2,13 @@
 $title = 'Beranda';
 include_once 'sources/layouts/header.php';
 ?>
+<script>
+  const path = window.location.pathname;
+  const pathArray = path.split('/');
+  if (pathArray[pathArray.length - 1] === 'index' || pathArray[pathArray.length - 1] === 'index.php') {
+    window.location = '<?= $baseUrl; ?>'
+  }
+</script>
 <div class="container">
   <div class="row mt-3">
     <div class="col-md-4 order-lg-2"><a href="<?= $baseUrl; ?>upload" class="btn btn-primary"><i class="bi bi-file-earmark-image"></i> Upload Gambar</a></div>
@@ -13,16 +20,6 @@ include_once 'sources/layouts/header.php';
   
   <div class="row" id="card-wrapper">
   </div>
-
-  <nav aria-label="Page navigation example">
-    <ul class="pagination mt-3">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-  </nav>
 
 </div>
 

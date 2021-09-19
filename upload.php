@@ -3,20 +3,24 @@ $title = 'Upload Gambar';
 include_once 'sources/layouts/header.php';
 ?>
 
-<div class="container ">
-  <h1 class="text-center">Upload Gambar</h1>
-  <form method="POST" enctype="multipart/form-data">
-    <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
-      <input type="text" class="form-control" id="title" name="title">
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="text-primary mb-4">Upload Gambar</h2>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="mb-2">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name="title">
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">Image</label>
+          <input class="form-control" type="file" id="img" name="img">
+        </div>
+        <input type="email" hidden class="form-control" id="email" name="email">
+        <button type="submit" name="sub" class="btn btn-primary mt-3">Submit</button>
+      </form>
     </div>
-    <div class="mb-3">
-      <label for="img" class="form-label">Default file input example</label>
-      <input class="form-control" type="file" id="img" name="img">
-    </div>
-    <input type="email" hidden class="form-control" id="email" name="email">
-    <button type="submit" name="sub" class="btn btn-primary">Submit</button>
-  </form>
+  </div>
 </div>
 
 <script src="assets/js/upload.js"></script>
@@ -62,25 +66,15 @@ if (isset($_POST['sub'])) {
       echo "
       <script>
         alert('Gambar berhasil diupload');
-        Swal.fire({
-          icon: 'success',
-          title: 'Gambar berhasil diunggah',
-          confirmButtonColor: '#219ebc',
-        })
-        window.location='';
+        window.location='./';
       </script>
       ";
     }
   } else {
     echo "
     <script>
-      Swal.fire({
-        icon: 'failed',
-        title: 'Please enter a correct img extension.',
-        confirmButtonColor: '#bf0006',
-      })
       alert('Please enter a correct img extension. Only png, jpg, or jpeg');
-      window.location='upload';
+      window.location='./';
     </script>";
     die;
   }
