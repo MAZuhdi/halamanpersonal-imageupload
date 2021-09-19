@@ -15,7 +15,7 @@ function responseApi($status, $message, $data)
 
 $email = $_GET['email'];
 
-$result = mysqli_query($conn, "SELECT * FROM images WHERE email = '$_GET[email]'");
+$result = mysqli_query($conn, "SELECT * FROM images WHERE email = '$_GET[email]' ORDER BY id DESC");
 
 if (mysqli_num_rows($result) !== 0) {
   $responseData = [];
