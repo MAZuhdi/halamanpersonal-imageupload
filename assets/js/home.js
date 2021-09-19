@@ -58,5 +58,6 @@ fetch(`api/user-uploaded-images?email=${email}`)
       });
       cardWrapper.innerHTML = cardsHTML;
     } else {
+      cardWrapper.innerHTML = `<h3 class="text-left">Belum ada gambar yang diunggah.</h3>`;
     }
   });
