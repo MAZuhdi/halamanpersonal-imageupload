@@ -59,10 +59,29 @@ if (isset($_POST['sub'])) {
       die("Query failed: " . mysqli_errno($conn) .
         " - " . mysqli_error($conn));
     } else {
-      echo "<script>alert('Data berhasil ditambah.');window.location='';</script>";
+      echo "
+      <script>
+        alert('Gambar berhasil diupload');
+        Swal.fire({
+          icon: 'success',
+          title: 'Gambar berhasil diunggah',
+          confirmButtonColor: '#219ebc',
+        })
+        window.location='';
+      </script>
+      ";
     }
   } else {
-    echo "<script>alert('Please enter a correct img extension.');window.location='upload';</script>";
+    echo "
+    <script>
+      Swal.fire({
+        icon: 'failed',
+        title: 'Please enter a correct img extension.',
+        confirmButtonColor: '#bf0006',
+      })
+      alert('Please enter a correct img extension. Only png, jpg, or jpeg');
+      window.location='upload';
+    </script>";
     die;
   }
 }

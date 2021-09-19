@@ -15,13 +15,12 @@ input:focus {
   transition: all 0.3s;
 }
 a.btn-primary:hover {
-  color: white!important;
+  color: white !important;
 }
 
 .btn-primary:hover {
   background-color: #023047 !important;
 }
-
 
 .text-primary {
   color: #219ebc !important;
@@ -60,4 +59,24 @@ a:hover {
   left: 0;
   position: absolute;
   z-index: 50;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ced4da;
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0% {
+    background: #ced4da;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: #ced4da;
+  }
 }
